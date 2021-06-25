@@ -167,7 +167,7 @@ sub run_main{
             }elsif(/$mod_end_patt/){
                 print $tmphandle ");" . "\n";
             }elsif(/$mod_io_patt/){
-                print $tmphandle " "x8 
+                print $tmphandle " "x8
                                . sprintf("%-${top_io_name_max_len}s", $1)
                                . " "
                                . "$2"
@@ -192,7 +192,7 @@ sub run_main{
             }elsif(/\A\s*(\)\S+\()/){
                 print $tmphandle " " x 4 . "$1\n";
             }elsif(/$sub_mod_io_patt/){
-                print $tmphandle " "x8 
+                print $tmphandle " "x8
                                . sprintf("%-${name_max_len}s", $1)
                                . " "
                                . "( "
@@ -217,7 +217,7 @@ sub run_main{
             }elsif(/$mod_end_patt/){
                 print $tmphandle " " x 4 . ");" . "\n";
             }elsif(/$sub_mod_io_patt/){
-                print $tmphandle " "x8 
+                print $tmphandle " "x8
                                . sprintf("%-${name_max_len}s", $1)
                                . " "
                                . "( "
